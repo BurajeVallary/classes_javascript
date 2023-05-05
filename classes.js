@@ -7,7 +7,7 @@
 
 
 
-// 1) Create a Car class or function constructor that has the following properties:
+// 1.Create a Car class or function constructor that has the following properties:
 // a. make (string): The make of the car, e.g., "Toyota".
 // b. model (string): The model of the car, e.g., "Camry".
 // c. year (number): The year the car was manufactured, e.g., 2020.
@@ -22,7 +22,7 @@ class Car {
     this.isAvailable = isAvailable;
   }
 
-  toggleAvailability() {
+  carAvailable() {
     this.isAvailable = !this.isAvailable;
   }
 }
@@ -34,7 +34,7 @@ console.log(cars.make);
 console.log(cars.year); 
 console.log(cars.isAvailable);
 
-cars.toggleAvailability();
+cars.carAvailable();
 console.log(cars.isAvailable); 
 
 
@@ -61,7 +61,7 @@ class Rental{
         const startdate = new Date(this.rentalStartDate);
         const enddate = new Date(this.rentalEndDate);
         const xtime = Math.abs(enddate - startdate);
-        const xdays = Math.ceil(xtime / (1000*60*60*24));
+        const xdays = Math.ceil(xtime / (800*60*30*24));
         return xdays;
       }
 }
